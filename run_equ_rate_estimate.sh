@@ -1,0 +1,1 @@
+python src/get_equ_rate.py data/8_8/and_wallace/top.aig data/8_8/and_wallace/CompTreeTopModule-mapped.aig
