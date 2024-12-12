@@ -1,0 +1,58 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug test_read_aig",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/data/yunhaozhou/project/datapath_cec/my_test/test_read_aig",
+            "args": ["/data/yunhaozhou/project/datapath_cec/data/4_4/and_dadda/top.aig"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/home/yunhaozhou/my_conda_env/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Debug simulator",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/data/yunhaozhou/project/datapath_cec/simulator/simulator_equ_fastfast",
+            "args": ["/data/yunhaozhou/project/datapath_cec/data/4_4/and_dadda/top.aig", "/data/yunhaozhou/project/datapath_cec/data/4_4/and_dadda/top.aig"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/home/yunhaozhou/my_conda_env/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

@@ -93,6 +93,13 @@ class OrderedData(Data):
 def get_graph(aig_file):
     x_data, edge_index = aiger_utils.aig_to_xdata(aig_file)
     # fanin_list, fanout_list = circuit_utils.get_fanin_fanout(x_data, edge_index)
+    
+    num_and = 0
+    for i in x_data:
+        if i[1] == 1:
+            num_and += 1
+    print(f"AND: {num_and}")
+    
     x_data = np.array(x_data)
     
     x_one_hot = dg.construct_node_feature(x_data, 3)
@@ -126,11 +133,13 @@ if __name__ == '__main__':
         exit(1)
         
     graph1, graph2 = get_graph(aig_file1), get_graph(aig_file2)
-    
+    # for i in range(graph1.edge_index.shape[1]):
+    #     print(f"{graph1.edge_index[0][i]}->{graph1.edge_index[1][i]}")
     ################################################
     # DeepGate2 (node-level) labels
     ################################################
     result, exec_time = circuit_utils.get_equ_rate_cpp(graph1, graph2, 15000, fast=True)
     equ_rate = get_equ_rate_from_output(result)
+    print(result)
     print(f"Equ_rate: {equ_rate}")
     print(f"Runtime: {exec_time}")
