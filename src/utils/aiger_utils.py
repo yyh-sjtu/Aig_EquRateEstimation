@@ -218,8 +218,8 @@ def aig_to_xdata(aig_filename, gate_to_index={'PI': 0, 'AND': 1, 'NOT': 2}):
                 not_index = len(x_data) - 1
                 edge_index.append([po_index, not_index])
                 has_not[po_index] = not_index
-    for item in edge_index:
-        print(f"{item[0]}->{item[1]}")
+    # for item in edge_index:
+    #     print(f"{item[0]}->{item[1]}")
 
     return x_data, edge_index
 

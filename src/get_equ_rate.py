@@ -94,11 +94,11 @@ def get_graph(aig_file):
     x_data, edge_index = aiger_utils.aig_to_xdata(aig_file)
     # fanin_list, fanout_list = circuit_utils.get_fanin_fanout(x_data, edge_index)
     
-    num_and = 0
-    for i in x_data:
-        if i[1] == 1:
-            num_and += 1
-    print(f"AND: {num_and}")
+    # num_and = 0
+    # for i in x_data:
+    #     if i[1] == 1:
+    #         num_and += 1
+    # print(f"AND: {num_and}")
     
     x_data = np.array(x_data)
     
