@@ -10,6 +10,7 @@ import time
 import argparse
 import torch.nn.functional as F
 import re
+import time 
 
 import sys
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -132,6 +133,7 @@ if __name__ == '__main__':
         print("Please provide the path to the AIGER files.")
         exit(1)
         
+    start_time = time.time()
     graph1, graph2 = get_graph(aig_file1), get_graph(aig_file2)
     # for i in range(graph1.edge_index.shape[1]):
     #     print(f"{graph1.edge_index[0][i]}->{graph1.edge_index[1][i]}")
@@ -143,3 +145,5 @@ if __name__ == '__main__':
     print(result)
     print(f"Equ_rate: {equ_rate}")
     print(f"Runtime: {exec_time}")
+    
+    print(f"Total runtime: {time.time() - start_time}")
