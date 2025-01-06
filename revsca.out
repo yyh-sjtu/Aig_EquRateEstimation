@@ -1,0 +1,42 @@
+******************************************************************************************************************
+*                                                   RevSCA-2.0                                                   *
+*                                                                                                                *
+* Copyright (c) 2020 Group of Computer Architecture. All Rights Reserved.                                        *
+* For more information, please visit http://www.sca-verification.org/ or contact revsca@sca-verification.org.    *
+******************************************************************************************************************
+
+Results Generated at Fri Dec 13 17:56:47 2024
+
+CPU	: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+Memory  : 2063899 MB
+
+Multiplier name  :  /data/yunhaozhou/project/datapath_cec/data/32_32/default/compile_ultra-CompTreeTopModule-mapped.aig
+Multiplier size  :  32*32
+Number system    :  unsigned binary
+Output file name :  revsca.out
+
+*************************************
+--------------Run-times--------------
+*************************************
+
+Parsing & Reverse engineering : 0.106516
+Detecting cones               : 0.00216869
+Generating cone polynomials   : 0.00332327
+Global backward rewriting     : 1.82905
+Overall run-time              : 1.94105
+
+*************************************
+----------Verification data----------
+*************************************
+
+#Node       : 10906
+#Atomic     : 1050
+#Cone       : 1125
+#Vanishing  : 0
+#MaxPoly    : 2195
+
+*************************************
+---------Verification result---------
+*************************************
+
+The multiplier is correct!

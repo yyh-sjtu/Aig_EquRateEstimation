@@ -1476,7 +1476,7 @@ def prepare_dg2_labels_cpp(g, no_patterns=15000,
     return prob, tt_index, tt_sim, con_index, con_label
 
 def get_equ_rate_cpp(g1, g2, no_patterns=15000, 
-                           simulator='./simulator/simulator_equ_fast', 
+                           simulator='./simulator/simulator_equ_fast_parallel', 
                            graph_filename='', 
                            res_filepath='', 
                            fast=False):
