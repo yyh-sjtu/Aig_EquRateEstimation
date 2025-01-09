@@ -319,7 +319,7 @@ vector<vector<uint64_t> > get_tt(string filename, vector<vector<uint64_t> > inpu
     int max_level = 0;
     // bfs
     queue<int> q;
-    vector<bool> visited(n, false);
+    vector<int> visited(n, 0);
     for(int i = 0; i < pi_list.size(); i++){
         q.push(pi_list[i]);
     }
@@ -332,10 +332,21 @@ vector<vector<uint64_t> > get_tt(string filename, vector<vector<uint64_t> > inpu
             q.pop();
             cur_level_list.push_back(node);
             for (int fanout : fanout_list[node]) {
-                if (!visited[fanout]) {
+              if (gate_list[fanout] == AND) {
+                if (visited[fanout] == 1) {
                     q.push(fanout);
-                    visited[fanout] = true;
+                    visited[fanout] += 1;
                 }
+                else if (visited[fanout] == 0) {
+                    visited[fanout] += 1;
+                }
+              }
+              else if (gate_list[fanout] == NOT) {
+                if (visited[fanout] == 0) {
+                    q.push(fanout);
+                    visited[fanout] += 1;
+                }
+              }
             }
         }
         level_list.push_back(cur_level_list);
