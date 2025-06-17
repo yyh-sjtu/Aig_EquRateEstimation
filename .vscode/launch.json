@@ -33,14 +33,14 @@
             "name": "Debug simulator",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/data/yunhaozhou/project/datapath_cec/simulator/simulator_equ_fastfast",
-            "args": ["/data/yunhaozhou/project/datapath_cec/data/4_4/and_dadda/top.aig", "/data/yunhaozhou/project/datapath_cec/data/4_4/and_dadda/top.aig"],
+            "program": "/home/user/projects/Multiplier-cec/simulator/equ_rate_est",
+            "args": ["/home/user/projects/Multiplier-cec/data/8_8/and_wallace/top.aig", "/home/user/projects/Multiplier-cec/data/8_8/and_wallace/top.aig", "15000"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/home/yunhaozhou/my_conda_env/bin/gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
